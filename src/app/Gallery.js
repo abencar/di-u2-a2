@@ -1,33 +1,33 @@
 import { getImageUrl } from './utils.js';
+import Perfil from './Perfiles.js';
+
+const Persona1 = {
+  nombre: "Katsuko Saruhashi",
+  profesion: "geoquímica",
+  premios: 2,
+  descubrimiento: "un método para medir el dióxido de carbono en el agua de mar",
+  src: getImageUrl('szV5sdG'),
+  alt: "Maria Skłodowska-Curie",
+  width: 70,
+  height: 70
+};
+const Persona2 = {
+  nombre: "Maria Skłodowska-Curie",
+  profesion: "física y química",
+  premios: 4,
+  descubrimiento: "polonio (elemento químico)",
+  src :getImageUrl('YfeOqp2'),
+  alt : "Katsuko Saruhashi",
+  width: 70,
+  height :70,
+};
+
 
 export default function Gallery() {
   return (
     <div>
       <h1>Científicos Notables</h1>
-      <section className="profile">
-        <h2>Maria Skłodowska-Curie</h2>
-        <img
-          className="avatar"
-          src={getImageUrl('szV5sdG')}
-          alt="Maria Skłodowska-Curie"
-          width={70}
-          height={70}
-        />
-        <ul>
-          <li>
-            <b>Profesión: </b> 
-            física y química
-          </li>
-          <li>
-            <b>Premios: 4 </b> 
-            (Premio Nobel de Física, Premio Nobel de Química, Medalla Davy, Medalla Matteucci)
-          </li>
-          <li>
-            <b>Descubrió: </b>
-            polonio (elemento químico)
-          </li>
-        </ul>
-      </section>
+      <Perfil />
       <section className="profile">
         <h2>Katsuko Saruhashi</h2>
         <img
